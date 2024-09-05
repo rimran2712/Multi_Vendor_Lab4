@@ -1,0 +1,31 @@
+---
+
+vIOS1:
+    hostname: 172.16.100.2
+    username: imran
+    password: Lovenation2712
+    groups:
+        - cisco_group
+      
+
+EOS2:
+   hostname: 172.16.100.6
+   username: imran
+   password: Lovenation2712
+   groups:
+       - arista_group
+
+
+vQFX-RE:
+    hostname: 172.16.100.10
+    username: root
+    password: Juniper
+    groups:
+        - juniper_group
+
+vN9K-SW:
+    hostname: 172.16.100.14
+    username: imran
+    password: Lovenation2712
+    groups:
+        - nexus_group
