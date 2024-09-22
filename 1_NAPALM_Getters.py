@@ -10,6 +10,9 @@ nr = InitNornir (config_file="/home/imran/Documents/Automation/Nornir/Runbooks_R
 # Clearing the Screen
 os.system('clear')
 
+"""
+This program will just pul information from muli vendors devices as in topology
+"""
 
 def get_device_info (task):
     task.run (task=napalm_get, getters=["get_facts",

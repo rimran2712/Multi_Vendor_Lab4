@@ -437,3 +437,68 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
 2024-08-28 00:06:29,505 -  nornir.core -     INFO -        run() - Running task 'get_device_info' with args {} on 4 hosts
 2024-08-28 00:12:53,047 -  nornir.core -     INFO -        run() - Running task 'get_device_info' with args {} on 4 hosts
 2024-08-28 00:13:58,428 -  nornir.core -     INFO -        run() - Running task 'get_device_info' with args {} on 4 hosts
+2024-09-22 13:34:01,391 -  nornir.core -     INFO -        run() - Running task 'get_device_info' with args {} on 4 hosts
+2024-09-22 13:50:14,170 -  nornir.core -     INFO -        run() - Running task 'get_device_info' with args {} on 4 hosts
+2024-09-22 13:50:33,696 -  nornir.core -     INFO -        run() - Running task 'get_device_info' with args {} on 4 hosts
+2024-09-22 13:58:15,133 -  nornir.core -     INFO -        run() - Running task 'get_device_info' with args {} on 4 hosts
+2024-09-22 14:33:28,022 -  nornir.core -     INFO -        run() - Running task 'get_device_info' with args {} on 4 hosts
+2024-09-22 14:36:15,440 -  nornir.core -     INFO -        run() - Running task 'get_device_info' with args {} on 4 hosts
+2024-09-22 14:37:50,508 -  nornir.core -     INFO -        run() - Running task 'get_device_info' with args {} on 4 hosts
+2024-09-22 14:38:56,241 -  nornir.core -     INFO -        run() - Running task 'get_device_info' with args {} on 4 hosts
+2024-09-22 14:47:19,011 -  nornir.core -     INFO -        run() - Running task 'get_device_info' with args {} on 4 hosts
+2024-09-22 14:47:34,328 - nornir.core.task -    ERROR -      start() - Host 'vN9K-SW1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/imran/Documents/Automation/Nornir/.MyNAPALMvenv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imran/Documents/Automation/Nornir/.MyNAPALMvenv/lib/python3.12/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+                ^^^^^^^^^^^^^^^^^
+  File "/home/imran/Documents/Automation/Nornir/.MyNAPALMvenv/lib/python3.12/site-packages/napalm/nxos_ssh/nxos_ssh.py", line 709, in get_interfaces
+    output = self._send_command(command)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imran/Documents/Automation/Nornir/.MyNAPALMvenv/lib/python3.12/site-packages/napalm/nxos_ssh/nxos_ssh.py", line 467, in _send_command
+    return self.device.send_command(command, cmd_verify=cmd_verify)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imran/Documents/Automation/Nornir/.MyNAPALMvenv/lib/python3.12/site-packages/netmiko/base_connection.py", line 111, in wrapper_decorator
+    return_val = func(self, *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imran/Documents/Automation/Nornir/.MyNAPALMvenv/lib/python3.12/site-packages/netmiko/utilities.py", line 596, in wrapper_decorator
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imran/Documents/Automation/Nornir/.MyNAPALMvenv/lib/python3.12/site-packages/netmiko/base_connection.py", line 1826, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'NXOS\\-9K\\-SW\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2024-09-22 14:47:34,328 - nornir.core.task -    ERROR -      start() - Host 'vN9K-SW1': task 'get_device_info' failed with traceback:
+Traceback (most recent call last):
+  File "/home/imran/Documents/Automation/Nornir/.MyNAPALMvenv/lib/python3.12/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imran/Documents/Automation/Nornir/Runbooks_Repositories/Multi_Vendor_Lab4/4_NAPALM_Connected_Interface_with_IP .py", line 76, in get_device_info
+    interfaces_results = task.run (task=napalm_get, getters=["get_interfaces"])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imran/Documents/Automation/Nornir/.MyNAPALMvenv/lib/python3.12/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2024-09-22 15:03:36,921 -  nornir.core -     INFO -        run() - Running task 'get_interafces_info' with args {} on 4 hosts
+2024-09-22 15:03:40,315 -  nornir.core -     INFO -        run() - Running task 'connected_up_interafces' with args {} on 4 hosts
+2024-09-22 15:05:10,529 -  nornir.core -     INFO -        run() - Running task 'get_interafces_info' with args {} on 4 hosts
+2024-09-22 15:05:13,708 -  nornir.core -     INFO -        run() - Running task 'connected_up_interafces' with args {} on 4 hosts
+2024-09-22 15:06:28,145 -  nornir.core -     INFO -        run() - Running task 'get_interafces_info' with args {} on 4 hosts
+2024-09-22 15:06:31,208 -  nornir.core -     INFO -        run() - Running task 'connected_up_interafces' with args {} on 4 hosts
+2024-09-22 15:09:14,299 -  nornir.core -     INFO -        run() - Running task 'get_interafces_info' with args {} on 4 hosts
+2024-09-22 15:09:17,292 -  nornir.core -     INFO -        run() - Running task 'connected_up_interafces' with args {} on 4 hosts
+2024-09-22 15:09:36,440 -  nornir.core -     INFO -        run() - Running task 'get_interafces_info' with args {} on 4 hosts
+2024-09-22 15:09:38,755 -  nornir.core -     INFO -        run() - Running task 'connected_up_interafces' with args {} on 4 hosts
