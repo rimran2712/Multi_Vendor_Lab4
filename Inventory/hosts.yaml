@@ -3,7 +3,7 @@
 vIOS1:
     hostname: 172.16.100.2
     username: imran
-    password: Lovenation2712
+    password: Cisco123*
     groups:
         - cisco_group
       
@@ -11,7 +11,7 @@ vIOS1:
 EOS2:
    hostname: 172.16.100.6
    username: imran
-   password: Lovenation2712
+   password: Cisco123*
    groups:
        - arista_group
 
@@ -26,6 +26,6 @@ vQFX-RE:
 vN9K-SW:
     hostname: 172.16.100.14
     username: imran
-    password: Lovenation2712
+    password: Cisco123*
     groups:
         - nexus_group
